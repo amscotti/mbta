@@ -103,6 +103,15 @@ Routes: Orange
 #### Docker
 You can build the image using `docker build . -t mbta`. This will create a container that has a native image created from GraalVM.
 
+There's also a pre-generated docker image at `ghcr.io/amscotti/mbta:main` created from a Github action.
+
+```
+❯ docker run ghcr.io/amscotti/mbta:main -s "Back Bay" -d "Haymarket"
+Back Bay to Haymarket
+Path: Back Bay->Tufts Medical Center->Chinatown->Downtown Crossing->State->Haymarket
+Routes: Orange
+```
+
 ### Unit Test
 Unit test can be run by `clj -M:test` and all the test can be found under the `test` folder for which question.
 
