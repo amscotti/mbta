@@ -1,0 +1,18 @@
+{:paths [:clj-paths :resource-paths]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        clj-http/clj-http {:mvn/version "3.12.3"}
+        cheshire/cheshire {:mvn/version "5.11.0"}
+        org.clojure/tools.cli {:mvn/version "1.0.214"}}
+ :aliases {:clj-paths ["src" "test"]
+           :resource-paths ["resources"]
+           :run {:main-opts ["-m" "core"]}
+           :questions  {:main-opts ["-m" "questions"]}
+           :question1  {:main-opts ["-m" "question1"]}
+           :question2  {:main-opts ["-m" "question2"]}
+           :question3  {:main-opts ["-m" "question3"]}
+           :test {:extra-paths ["test"]
+                  :extra-deps  {lambdaisland/kaocha {:mvn/version "1.70.1086"}}
+                  :main-opts   ["-m" "kaocha.runner"]}
+           :build {:deps {io.github.clojure/tools.build {:git/tag "v0.8.3" :git/sha "0d20256"}}
+                   :ns-default build}}}
+

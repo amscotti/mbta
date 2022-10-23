@@ -1,0 +1,16 @@
+.git
+.gitignore
+.github
+README.md
+LICENSE
+*.jar
+*.class
+/lib/
+/classes/
+/target/
+/checkouts/
+.nrepl-port
+.cpcache/
+.lsp/
+.clj-kondo/
+.calva/
